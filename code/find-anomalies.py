@@ -23,8 +23,10 @@ specialtyDescrs = ["Dermatology", "Otolaryngology", "Plastic Surgery", "Ophthalm
                    "Radiology", "Optometrist", "Pathology",  "Physical Therapist" ] 
 
 for descr in specialtyDescrs:
-    num, _ = `Specialty(num, $descr)`.next()
-    specialties.append(num)
+    try:
+        num, _ = `Specialty(num, $descr)`.next()
+        specialties.append(num)
+    except: continue
 
 # Build a map of similar specialties. This is used to find false-positives.
 similarSpecialtyDescrs = [("Dentist", "Oral & Maxillofacial Surgery"),
