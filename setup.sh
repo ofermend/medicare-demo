@@ -2,9 +2,12 @@ mkdir ref_data
 mkdir data
 
 # Get main Medicare-B dataset
-wget http://download.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Medicare-Physician-and-Other-Supplier-PUF-CY2012.zip
-unzip -d ref_data Medicare-Physician-and-Other-Supplier-PUF-CY2012.zip
-rm Medicare-Physician-and-Other-Supplier-PUF-CY2012.zip
+## OLD wget http://download.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Medicare-Physician-and-Other-Supplier-PUF-CY2012.zip
+## OLD unzip -d ref_data Medicare-Physician-and-Other-Supplier-PUF-CY2012.zip
+### rm Medicare-Physician-and-Other-Supplier-PUF-CY2012.zip
+wget http://www.cms.gov/apps/ama/license.asp?file=http://download.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Medicare_Provider_Util_Payment_PUF_CY2012_update.zip
+unzip -d ref_data Medicare_Provider_Util_Payment_PUF_CY2012_update.zip
+rm Medicare_Provider_Util_Payment_PUF_CY2012_update.zip
 
 # Get NPPES full replacement monthly file
 wget -r http://nppes.viva-it.com/NPI_Files.html
